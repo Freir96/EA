@@ -13,6 +13,13 @@ def model_function(i, a, b, c):
 def init_population():
 
 
+def mean_square_error(values_expected, values_obtained):
+    E = 0
+    for i in range(0, len(values_expected)):
+        E = E + (values_expected - values_obtained) ** 2
+    E = E / len(values_obtained)
+    return E
+
 
 def procedure_ea():
     t = 0
